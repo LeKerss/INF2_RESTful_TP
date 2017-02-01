@@ -7,11 +7,13 @@ package TP_RESTful;
 
 import java.util.HashMap;
 import java.util.Map;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
  * @author Kersa
  */
+@XmlRootElement
 public class ListeEtudiant {
     private Map<Integer, Etudiant> maListe;
     private int count;
@@ -65,5 +67,6 @@ public class ListeEtudiant {
     public Etudiant modifierEtudiant(int id, Etudiant e) {
         return maListe.replace(id, e);
     }
+    
     
 }
